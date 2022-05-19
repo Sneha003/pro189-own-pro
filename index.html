@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <scipt
+      src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"
+    ></scipt>
+  </head>
+
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item
+          id="bf1"
+          src="./assets/butterfly/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="bf2"
+          src="./assets/butterfly1/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="bf3"
+          src="assets/butterfly2/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="bf4"
+          src="./assets/butterfly3/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="bf5"
+          src="./assets/grasshopper/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item id="bf6" src="./assets/plane/scene.gltf"></a-asset-item>
+
+        <img src="./assets/6.jpg" id="sky" 
+      /></a-assets>
+
+      <a-sky src="#sky"></a-sky>
+      <a-camera position="0 0 6"></a-camera>
+      <a-entity
+        id="b1"
+        gltf-model="#bf1"
+        position="0 0 -10"
+        scale="0.1 0.1 0.1"
+        rotation="180 -30 30"
+        animation-mixer
+      ></a-entity>
+      <a-entity
+        id="b2"
+        gltf-model="#bf2"
+        position="20 0 -10"
+        scale="0.1 0.1 0.1"
+        rotation="180 -30 30"
+        animation-mixer
+      ></a-entity>
+      <a-entity
+        id="b3"
+        gltf-model="#bf3"
+        position="50 0 0"
+        scale="10 10 10"
+        rotation="180 -30 30"
+        animation-mixer
+      >
+        <a-entity
+          id="b4"
+          gltf-model="#bf4"
+          position="10 0 -10"
+          scale="40 40 40"
+          rotation="180 -30 30"
+          animation-mixer
+        >
+          <a-entity
+            id="b5"
+            gltf-model="#bf5"
+            position="-10 0 -10"
+            scale="100 100 100"
+            rotation="180 -30 30"
+            animation-mixer
+          ></a-entity>
+          <a-entity
+            id="b6"
+            gltf-model="#bf6"
+            position="5 0 -10"
+            scale="60 60 60"
+            rotation="180 -30 30"
+            animation-mixer
+          ></a-entity>
+        </a-entity>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
